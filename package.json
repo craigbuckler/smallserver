@@ -1,0 +1,30 @@
+{
+  "name": "smallserver",
+  "version": "1.0.0",
+  "description": "a small static file server with no dependencies",
+  "main": "smallserver.js",
+  "scripts": {
+    "start": "node ./smallserver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ss": "./smallserver.js",
+    "smallserver": "./smallserver.js"
+  },
+  "author": "Craig Buckler",
+  "license": "MIT",
+  "keywords": [
+    "static",
+    "file",
+    "server"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigbuckler/smallserver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/craigbuckler/smallserver/issues"
+  },
+  "homepage": "https://github.com/craigbuckler/smallserver#readme",
+  "dependencies": {}
+}
