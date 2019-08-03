@@ -1,6 +1,6 @@
 # smallserver
 
-[**GitHub**](https://github.com/craigbuckler/smallserver) | [**npm**](https://www.npmjs.com/package/smallserver) | [**donate**](https://gum.co/smallserver) | [@craigbuckler](https://twitter.com/craigbuckler) | [craigbuckler.com](https://craigbuckler.com/)
+[**GitHub**](https://github.com/craigbuckler/smallserver) | [**npm**](https://www.npmjs.com/package/small-static-server) | [**donate**](https://gum.co/smallserver) | [@craigbuckler](https://twitter.com/craigbuckler) | [craigbuckler.com](https://craigbuckler.com/)
 
 A small and fast cross-platform Node.js static file server with no dependencies. The directory default is `index.html` and correct MIME types are used.
 
