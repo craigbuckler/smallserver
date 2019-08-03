@@ -1,5 +1,5 @@
 {
-  "name": "smallserver",
+  "name": "small-static-server",
   "version": "1.0.0",
   "description": "a small static file server with no dependencies",
   "main": "smallserver.js",

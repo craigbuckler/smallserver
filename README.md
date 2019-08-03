@@ -12,7 +12,7 @@ Ideal for serving client-side code on a development machine, but not optimised f
 Install globally:
 
 ```bash
-npm i smallserver -g
+npm i small-static-server -g
 ```
 
 Launch using `ss` or `smallserver` to serve files from the current root directory, e.g. <http://localhost:8888/>
