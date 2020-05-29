@@ -4,7 +4,7 @@
 
 A small and fast cross-platform Node.js static file server with no dependencies. The directory default is `index.html` and correct MIME types are used.
 
-Ideal for serving client-side code on a development machine, but not optimised for production servers (no compression, caching, etc.)
+Ideal for serving client-side code on a development machine, but not optimised for production servers (no compression, caching, security, etc.)
 
 
 ## Usage
@@ -39,6 +39,11 @@ where:
 
 
 ## Version history
+
+### v1.0.1, 29 May 2020
+
+* MIME support for XHTML files
+
 
 ### v1.0.0, 3 August 2019
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
-smallserver.js: a static file web server
+smallserver.js: a tiny static file web server without any dependencies
 
 launch with `./smallserver.js [port] [dir]` where:
 
@@ -13,30 +13,32 @@ launch with `./smallserver.js [port] [dir]` where:
   'use strict';
 
   const
-    http = require('http'),
-    url = require('url'),
-    path = require('path'),
-    fs = require('fs'),
-    port = parseInt(process.argv[2] || 8888, 10),
-    folder = process.argv[3] || './',
-    root = path.isAbsolute(folder) ? path.join(folder) : path.join(process.cwd(), folder),
-    mime = {
-      '.html':  ['text/html', 86400],
-      '.htm':   ['text/html', 86400],
-      '.css':   ['text/css', 86400],
-      '.js':    ['application/javascript', 86400],
-      '.json':  ['application/json', 86400],
-      '.jpg':   ['image/jpeg', 0],
-      '.jpeg':  ['image/jpeg', 0],
-      '.png':   ['image/png', 0],
-      '.gif':   ['image/gif', 0],
-      '.ico':   ['image/x-icon', 0],
-      '.svg':   ['image/svg+xml', 0],
-      '.txt':   ['text/plain', 86400],
-      'err':    ['text/plain', 30]
+    http        = require('http'),
+    url         = require('url'),
+    path        = require('path'),
+    fs          = require('fs'),
+    port        = parseInt(process.argv[2] || 8888, 10),
+    folder      = process.argv[3] || './',
+    root        = path.isAbsolute(folder) ? path.join(folder) : path.join(process.cwd(), folder),
+    mime        = {
+      '.html'   : ['text/html', 86400],
+      '.htm'    : ['text/html', 86400],
+      '.xhtml'  : ['text/html', 86400],
+      '.xhtm'   : ['text/html', 86400],
+      '.css'    : ['text/css', 86400],
+      '.js'     : ['application/javascript', 86400],
+      '.json'   : ['application/json', 86400],
+      '.jpg'    : ['image/jpeg', 0],
+      '.jpeg'   : ['image/jpeg', 0],
+      '.png'    : ['image/png', 0],
+      '.gif'    : ['image/gif', 0],
+      '.ico'    : ['image/x-icon', 0],
+      '.svg'    : ['image/svg+xml', 0],
+      '.txt'    : ['text/plain', 86400],
+      'err'     : ['text/plain', 30]
     };
 
-  // unable to read root folder
+  // unable to read root folder?
   if (!fs.existsSync(root)) {
     console.log(`ERROR: root folder ${root} does not exist`);
     process.exit(1);
