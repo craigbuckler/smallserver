@@ -21,21 +21,23 @@ launch with `./smallserver.js [port] [dir]` where:
     folder      = process.argv[3] || './',
     root        = path.isAbsolute(folder) ? path.join(folder) : path.join(process.cwd(), folder),
     mime        = {
-      '.html'   : ['text/html', 86400],
-      '.htm'    : ['text/html', 86400],
-      '.xhtml'  : ['text/html', 86400],
-      '.xhtm'   : ['text/html', 86400],
-      '.css'    : ['text/css', 86400],
-      '.js'     : ['application/javascript', 86400],
-      '.json'   : ['application/json', 86400],
-      '.jpg'    : ['image/jpeg', 0],
-      '.jpeg'   : ['image/jpeg', 0],
-      '.png'    : ['image/png', 0],
-      '.gif'    : ['image/gif', 0],
-      '.ico'    : ['image/x-icon', 0],
-      '.svg'    : ['image/svg+xml', 0],
-      '.txt'    : ['text/plain', 86400],
-      'err'     : ['text/plain', 30]
+      '.html'       : 'text/html',
+      '.htm'        : 'text/html',
+      '.xhtml'      : 'text/html',
+      '.xhtm'       : 'text/html',
+      '.css'        : 'text/css',
+      '.js'         : 'application/javascript',
+      '.json'       : 'application/json',
+      '.webmanifest': 'application/manifest+json',
+      '.manifest'   : 'application/manifest+json',
+      '.jpg'        : 'image/jpeg',
+      '.jpeg'       : 'image/jpeg',
+      '.png'        : 'image/png',
+      '.gif'        : 'image/gif',
+      '.svg'        : 'image/svg+xml',
+      '.ico'        : 'image/x-icon',
+      '.txt'        : 'text/plain',
+      'err'         : 'text/plain'
     };
 
   // unable to read root folder?
@@ -81,11 +83,9 @@ launch with `./smallserver.js [port] [dir]` where:
     // serve content
     function serve(code, content, type) {
 
-      let head = mime[type] || mime['err'];
-
       res.writeHead(code, {
-        'Content-Type': head[0],
-        'Cache-Control': 'must-revalidate, max-age=' + (head[1] || 2419200),
+        'Content-Type': mime[type] || mime['err'],
+        'Cache-Control': 'must-revalidate, max-age=0',
         'Content-Length': Buffer.byteLength(content)
       });
       res.write(content);

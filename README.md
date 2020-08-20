@@ -40,6 +40,12 @@ where:
 
 ## Version history
 
+### v1.0.2, 20 August 2020
+
+* disabled caching on all files
+* MIME support for manifest
+
+
 ### v1.0.1, 29 May 2020
 
 * MIME support for XHTML files
