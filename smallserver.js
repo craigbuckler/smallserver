@@ -27,6 +27,8 @@ launch with `./smallserver.js [port] [dir]` where:
       '.xhtm'       : 'text/html',
       '.css'        : 'text/css',
       '.js'         : 'application/javascript',
+      '.mjs'        : 'application/javascript',
+      '.cjs'        : 'application/javascript',
       '.json'       : 'application/json',
       '.webmanifest': 'application/manifest+json',
       '.manifest'   : 'application/manifest+json',

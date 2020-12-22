@@ -40,6 +40,11 @@ where:
 
 ## Version history
 
+### v1.0.3, 22 December 2020
+
+* MIME support for .mjs and .cjs
+
+
 ### v1.0.2, 20 August 2020
 
 * disabled caching on all files
